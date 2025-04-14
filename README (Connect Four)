@@ -1,0 +1,9 @@
+Implement the game of Connect Four, with a graphical interface in Windows Forms.
+
+The board should look more or less like this.
+
+On each player's turn, let them click anywhere in a column to play in the lowest free space in that column. In other words, they should not need to click on the free space itself.
+
+After a win, the game should begin on the next click (anywhere).
+
+Just like in our Tic Tac Toe program, if a player wins, highlight the winning position like this.
