@@ -1,0 +1,55 @@
+In this exercise, you will first write a hash table class that implements a generic map. You will then use the class to count word frequencies in a file.
+
+Read the input text file text.in and determine the 20 words that appear most frequently in it. Write each of these words along with its number of occurrences to standard output, in descending order of frequency. You may write words with the same frequency in any order. If two different words have the same number of occurrences, you may choose either of them for the top 20 words as necessary.
+
+In this exercise, a word is any sequence of consecutive letters that is not preceded or followed by a letter. Letters are only from the Latin alphabet, i.e. A through Z without any accent marks. When comparing two words, the difference between lowercase and uppercase letters is significant.
+
+Write the result to standard output. Each line of the output should contain a word and its number of occurrences, separated by a single space. If the input file contains fewer than 20 different words, the output should contain only as many words as occur in the input file.
+
+Important: You may read the input file only once.
+
+Example of input file:
+
+Thou still unravish'd bride of quietness, 
+Thou foster-child of silence and slow time,
+Sylvan historian, who canst thus express
+A flowery tale more sweetly than our rhyme:
+What leaf-fring'd legend haunts about thy shape
+Of deities or mortals, or of both,
+In Tempe or the dales of Arcady?
+What men or gods are these? What maidens loth?
+What mad pursuit? What struggle to escape?
+What pipes and timbrels? What wild ecstasy?
+
+Heard melodies are sweet, but those unheard
+Are sweeter; therefore, ye soft pipes, play on;
+Not to the sensual ear, but, more endear'd,
+Pipe to the spirit ditties of no tone:
+Fair youth, beneath the trees, thou canst not leave
+Thy song, nor ever can those trees be bare;
+Bold Lover, never, never canst thou kiss,
+Though winning near the goal yet, do not grieve;
+She cannot fade, though thou hast not thy bliss,
+For ever wilt thou love, and she be fair!
+Possible output:
+
+What 7
+the 5
+of 5
+thou 4
+or 4
+not 3
+d 3
+to 3
+and 3
+canst 3
+be 2
+ever 2
+but 2
+never 2
+thy 2
+trees 2
+Thou 2
+pipes 2
+more 2
+are 2
