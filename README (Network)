@@ -1,0 +1,27 @@
+The input forms 2D coordinates of computers. The goal of the assignment is to find such interconnection of the computers that the entire length of the cables is minimal. The connection forms a path in the graph theory meaning.
+
+Input
+The input data are read form the standard input. The data are split to lines. On the first line, there is the number of computers to be connected. On each of the following lines, there are two integer numbers separated by a space determining the position of a computer. Hence, the entire input has n+1 lines where n is the number of computers. At most one computer can occupy a single spot. The coordinates are in the range 0-200. The maximal number of computers in a single network is 10, the minimal number is 2.
+
+Output 
+The output is the information about the minimal-length computer interconnection. By interconnection, we mean a path (set of segments) containing all computers (neither a tree nor another type of graph). The length will be printed with the precision of two decimal digits. During the computation, use the double type, the formatting (rounding) is to be performed when printing the number. The output format is Minimal length of the network is: x.yz where x.yz is a real number with two decimal digits.
+
+Example of input:
+
+6
+
+5 19
+
+55 28
+
+38 101
+
+28 62
+
+111 84
+
+43 116
+
+
+
+Corresponding output: Minimal length of the network is: 225.45
