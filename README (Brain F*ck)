@@ -1,0 +1,25 @@
+The goal is to create an interpreter of the BrainF*** language
+
+The language contains 8 commands (characters). All other characters are ignored (but they count into the complete number of lines and characters -- see the error reporting below). A program works with an array of cells. Every cell has the size of char. The number of cells in the array is given as the second parameter of the program. In the case the second parameter is missing, the default size is 30,000. At the program start, the array is zeroed.
+
+Commands	
+>	increment the data pointer (to point to the next cell to the right)
+<	decrement the data pointer (to point to the next cell to the left).
++	increment the value of the cell at the data pointer by one, the operation silently overflows.
+-	decrement the value of the cell at the data pointer by one, the operation silently underflows.
+.	print out the value of the cell at the data pointer to the std output.
+The value of the cell is printed out as a Unicode character with the corresponding value.
+,	accept a value from the input, storing it in the cell at the data pointer
+[	if the value of the cell at the data pointer is equal to zero, jump forward to the command after the matching ]
+]	if the value of the cell at the data pointer is non-zero, jump backward before the matching [
+The program to be interpreted is in a file specified as the first command line parameter. The values are read from the standard input (System.in) and printed out to the standard output (System.out).
+
+The interpreter starts with verification of the whole program and in the case it finds errors (unopened/unclosed cycles, i.e., unpaired brackets [ and ]), the errors are printed as follows:
+
+Unclosed cycle - line X character Y 
+or
+
+Unopened cycle - line X character Y
+The lines and characters are numbered starting from 1. The position of a bracket without a corresponding paired bracket is printed out.
+
+If the data pointer is moved outside the working memory (the array of the cells) the error is printed out -- either Memory underrun or Memory overrun.
