@@ -1,0 +1,8 @@
+Two player alternately place their symbols on a 3x3 board. One player plays the letter O, and the other plays the letter X. A player wins if they succeed in placing three of their symbols in a row - horizontally, vertically or diagonally.
+
+The program's input describes a board state in three lines of three symbols each.
+Each symbol is either O, X or . (a free square). The fourth input line indicates the symbol of the player whose turn it is to play next.
+
+The program should determine whether the current player can force a win or at least a draw, or whether they must lose. Write one of these Czech words to the output: VYHRAJE (wins), PROHRAJE (loses) or REMIZUJE (draws).
+
+Note: The given state will not necessarily be the result of a previous game. For example, the board might contain several O symbols and no X symbols.
