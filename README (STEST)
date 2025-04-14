@@ -1,0 +1,52 @@
+The goal is to create a program that validates exam tests (i.e., the tests with A-B-C answers). The program reads from the standard input and terminates with the end of the input. From the standard input it reads a list of questions with possible answers and correct answers. After the test, the input contains answers of examined persons. To the standard output, the program prints out an evaluation for each of the examined persons, i.e., the score of obtained points per each question and the overall mark. The points are obtained for each incorrectly chosen or non-selected answer. The overall mark corresponds to the obtained points as follows: 0..2 points - one, 3..5 - two, 6..8 - three, 9 and above - four.
+
+Format of the input
+
+On the input, first there are an arbitrary number of questions separated by at least a single empty line. The format of a single question is as follows (per lines):
+
+a type of the question (either multichoice or singlechoice)
+an identification number of the question (the numbers of the questions need not to be ordered; if two questions have the same number, then the last such a question is valid) followed by a text of the question (the text can be over several lines and ends with first answer)
+possible answers - the answer starts on a new line with the identification letter (a single capital letter) and it can be over several lines (the identification letters need not to be ordered; if two answers have the same letter, then the last such an answer is valid)
+a list of correct answers - a line starting with the word Answer: and then a list of letters of correct answers separated by at least a single space (for singlechoice question there can be only a single correct answer)
+Example
+
+multichoice
+1. Která slova nejsou v Javě klíčová?
+A. public
+B. static
+C. then
+D. begin
+Answer: C D
+
+singlechoice
+2. Existují v Javě přetížené 
+operátory?
+A. Ano, lze přetížit libovolný operátor
+B. Ano, ale programátor nemůže přetížit operátory
+C. Ne
+Answer: B
+After all the questions are provided (the end of questions can be detected by a new block that does not start by the question type), there is an arbitrary number of answers that are separated by at least a single empty line. The format of a single answer is as follows (per lines):
+
+a name of the examined person
+for each question, there is a single line starting with the question's identification number followed by a list of identification letters of the selected answers separated by at least a single space (the order of questions can be arbitrary; if there are several lines for the same answer, then only the last such a line is considered; if a question is omitted, then it is equivalent to a situation that no answer is selected; if there is an answer for non-existing question, then it is ignored)
+
+Example
+
+Jan Novák
+1. B C D
+2. C
+If an error is discovered during the input processing (e.g., an invalid type of the question, an invalid answer in the list of correct answers, etc.), the the following string is printed ERROR - line # (# is substituted by the number of the line with the error). The program skips the rest of the block with the error and continues.
+
+Format of the output
+
+The program reads all the questions and then immediately for every examined person (immediately after his/her answers are read) prints out the results. The results of different persons are separated by a single empty line. The format of the results is as follows (per lines):
+
+a name of the examined person
+a line for every question starting with the identification number of the question and a number of obtained points (a point per each incorrectly chosen or non-selected answer; the lines with the questions' results are ordered by the questions' identification numbers)
+an overall result of the exam -- a lines starting with Result and then the resulting answer followed by the number of obtained points in parentheses
+Example
+
+Jan Novák
+1. 1
+2. 2
+Result: 2 (3)
